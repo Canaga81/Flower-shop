@@ -10,13 +10,13 @@ const Navbar = () => {
   const { searchHandleClose } = useContext(SidebarContext);
 
   return (
-    <div className="w-full h-[80px] bg-white sticky top-0 z-40">
+    <div className="w-full h-[100px] bg-white sticky top-0 z-40">
       <div className="container mx-auto">
         <div className="flex items-center justify-between sm:pl-24 sm:pr-24 pl-6 pr-6">
           <div>
             <div
               onClick={() => setIsOpen(true)}
-              className="w-[45px] h-[45px] flex justify-center items-center rounded-[5px] shadow-lg cursor-pointer pt-2"
+              className="w-[45px] h-[45px] flex justify-center items-center rounded-[5px] shadow-lg cursor-pointer pt-2 transition duration-200 hover:scale-95"
             >
               <HiBars3BottomLeft />
             </div>
@@ -27,12 +27,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex justify-between items-center gap-6">
-            <div onClick={searchHandleClose} className="w-[45px] h-[45px] flex justify-center items-center rounded-[5px] shadow-lg cursor-pointer pt-2">
+            <div onClick={searchHandleClose} className="w-[45px] h-[45px] flex justify-center items-center rounded-[5px] shadow-lg cursor-pointer pt-2 transition duration-200 hover:scale-95">
               <IoIosSearch />
             </div>
-            <div className="flex justify-between items-center gap-2 w-[95px] h-[45px] shadow-lg rounded-[5px] cursor-pointer pl-2 pr-2 pt-2">
+            <div className="flex justify-between items-center gap-2 w-[95px] h-[45px] shadow-lg rounded-[5px] cursor-pointer pl-2 pr-2 pt-2 transition duration-200 hover:scale-95">
               <IoCartOutline />
-              <p>25 Azn</p>
+              <p className="font-Montserrat">25 Azn</p>
             </div>
           </div>
         </div>

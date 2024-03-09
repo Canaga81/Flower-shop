@@ -23,7 +23,7 @@ const searchSidebar = () => {
         <div className="flex items-center bg-white px-3 py-2 w-1/3 rounded-md">
           <input
             placeholder="Mağazamızı axtarın"
-            className="border-none outline-none px-3 py-2 w-full rounded-md"
+            className="border-none outline-none px-3 py-2 w-full rounded-md font-Montserrat"
             type="text"
           />
           <IoIosSearch size={28} className="cursor-pointer" />

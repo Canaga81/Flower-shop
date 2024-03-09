@@ -4,7 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      Mont: `"Montserrat", sans-serif`,
+      Montserrat: `"Montserrat", sans-serif`,
     },
     screens: {
       sm: "640px",
@@ -15,6 +15,7 @@ export default {
     extend: {
       colors: {
         searchBg: '#FFD1D7',
+        heroText: '#665F5F',
       },
     },
   },

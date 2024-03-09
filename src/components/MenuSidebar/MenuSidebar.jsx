@@ -16,7 +16,7 @@ const MenuSidebar = () => {
         } w-full  bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px-[35px]`}
       >
         <div onClick={() => setIsOpen(false)} className="mt-10 cursor-pointer">
-          <HiMiniXMark size={25} />
+          <HiMiniXMark size={36} className="transition duration-150 hover:text-red-500" />
         </div>
         <div className="z-50 relative">
           {NavData.map((navItem, idx) => {
@@ -25,7 +25,7 @@ const MenuSidebar = () => {
                 <NavLink
                   onClick={() => setIsOpen(false)}
                   className={
-                    "mt-6 text-[25px] font-fontDisplay tracking-[1.5px] hover:text-red-500 transition duration-200"
+                    "mt-6 text-[25px] font-fontDisplay tracking-[1.5px] hover:text-red-500 transition duration-200 font-Montserrat"
                   }
                   to={navItem.to}
                 >
