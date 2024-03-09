@@ -7,6 +7,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Catalog from "./pages/Catalog/Catalog";
 import Navbar from "./components/Navbar/Navbar";
 import MenuSidebar from "./components/MenuSidebar/MenuSidebar";
+import SearchSidebar from "./components/SearchSidebar/SearchSidebar";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Routes>
 
         <MenuSidebar />
+        <SearchSidebar />
 
       </BrowserRouter>
     </>

@@ -12,7 +12,7 @@ const SidebarProvider = ({ children }) => {
   const [searchOpen, setSearchOpen] = useState(false);
 
   const searchHandleClose = () => {
-    setSearchOpen(false);
+    setSearchOpen(!searchOpen);
   };
 
   return (

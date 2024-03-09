@@ -1,22 +1,22 @@
 export const NavData = [
   {
-    label: "Home",
+    label: "Ana Sehife",
     to: "/",
   },
   {
-    label: "About Us",
+    label: "Haqqimizda",
     to: "/about",
   },
   {
-    label: "Catalog",
+    label: "Kataloq",
     to: "/catalog",
   },
   {
-    label: "Collections",
+    label: "Kolleksiyalar",
     to: "/collections",
   },
   {
-    label: "Contacts",
+    label: "Əlaqə",
     to: "/contacts",
   },
 ];

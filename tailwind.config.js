@@ -13,7 +13,9 @@ export default {
       xl: "1440px",
     },
     extend: {
-      colors: {},
+      colors: {
+        searchBg: '#FFD1D7',
+      },
     },
   },
   plugins: [],
