@@ -16,6 +16,7 @@ const SidebarProvider = ({ children }) => {
   };
 
   return (
+
     <SidebarContext.Provider
       value={{
         isOpen,
@@ -28,6 +29,7 @@ const SidebarProvider = ({ children }) => {
     >
       {children}
     </SidebarContext.Provider>
+    
   );
 };
 

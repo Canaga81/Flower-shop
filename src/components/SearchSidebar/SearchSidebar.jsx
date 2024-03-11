@@ -16,14 +16,14 @@ const searchSidebar = () => {
       <div
         className={`${
           searchOpen
-            ? "bg-searchBg w-full h-[200px] flex justify-center items-center fixed top-[90px] z-50 transition-all duration-300"
+            ? "bg-searchBg w-full h-[120px] sm:px-6 px-2 flex justify-center items-center fixed top-[90px] z-50 transition-all duration-300"
             : "opacity-0 transition-all fixed top-0"
         }`}
       >
-        <div className="flex items-center bg-white px-3 py-2 w-1/3 rounded-md">
+        <div className="flex items-center justify-between bg-white px-3 py-2 sm:w-1/2 w-full mx-6  rounded-md">
           <input
             placeholder="Mağazamızı axtarın"
-            className="border-none outline-none px-3 py-2 w-full rounded-md font-Montserrat"
+            className="border-none outline-none px-3 py-2s w-full rounded-md font-Montserrat"
             type="text"
           />
           <IoIosSearch size={28} className="cursor-pointer" />
