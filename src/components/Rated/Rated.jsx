@@ -3,7 +3,7 @@ import { DataContext } from "../../contexts/DataContext";
 import Card from "../Uİ/Card";
 
 const Rated = () => {
-  const { products, fetchProductsHandler, isLoading, error } = useContext(DataContext);
+  const { products, fetchProductsHandler, isLoading, error, query, visible, visiblePlusFunc } = useContext(DataContext);
 
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Rated = () => {
           <div className="flex flex-wrap justify-center gap-9">
             {isLoading && <p className="text-center font-Montserrat text-heroText tracking-[1.5px] lg:text-[45px] md:text-[39px] sm:text-[30px] text-[25px]">Loading...</p>}
             {!isLoading && error && <p className="text-center font-Montserrat text-red-600 tracking-[1.5px] lg:text-[45px] md:text-[39px] sm:text-[30px] text-[25px]">{error}</p>}
-            {!isLoading && products.length > 0 && products.map(({ title, image, id, price }) => (
+            {!isLoading && products.length > 0 && products.slice(0, visible).filter((product) => product.title.toLowerCase("tr-TR").includes(query.toLowerCase("tr-TR"))).map(({ title, image, id, price }) => (
               <Card key={id} title={title} image={image} price={price} />
             ))}
             {
@@ -30,7 +30,7 @@ const Rated = () => {
             }
           </div>
           <div>
-            <button className="lg:text-[24px] md:text-[21px] sm:text-[19px] text-[16px] border-none outline-none bg-heroText py-2 px-10 rounded-lg transition duration-200 opacity-80 hover:opacity-100 text-white font-Montserrat">
+            <button onClick={visiblePlusFunc} className="lg:text-[24px] md:text-[21px] sm:text-[19px] text-[16px] border-none outline-none bg-heroText py-2 px-10 rounded-lg transition duration-200 opacity-80 hover:opacity-100 text-white font-Montserrat">
               Daha Çox
             </button>
           </div>

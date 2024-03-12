@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { SidebarContext } from "../../contexts/SidebarContexts";
+import { DataContext } from "../../contexts/DataContext";
 
 const searchSidebar = () => {
   const { searchOpen, setSearchOpen } = useContext(SidebarContext);
+  const {setQuery} = useContext(DataContext);
 
   return (
     <div>
@@ -25,6 +27,7 @@ const searchSidebar = () => {
             placeholder="Mağazamızı axtarın"
             className="border-none outline-none px-3 py-2s w-full rounded-md font-Montserrat"
             type="text"
+            onChange={(e) => setQuery(e.target.value)}
           />
           <IoIosSearch size={28} className="cursor-pointer" />
         </div>

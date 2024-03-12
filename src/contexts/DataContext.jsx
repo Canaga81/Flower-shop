@@ -7,6 +7,14 @@ const DataProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const [query, setQuery] = useState("");
+
+  const [visible, setVisible] = useState(6);
+
+  const visiblePlusFunc = () => {
+    setVisible(item => item.length);
+  };
+
   const fetchProductsHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -33,7 +41,7 @@ const DataProvider = ({ children }) => {
   // }, [fetchProductsHandler]);
 
   return (
-    <DataContext.Provider value={{ fetchProductsHandler, products, isLoading, error }}>
+    <DataContext.Provider value={{ fetchProductsHandler, products, isLoading, error, setQuery, query, visible, visiblePlusFunc }}>
       {children}
     </DataContext.Provider>
   );

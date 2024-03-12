@@ -4,6 +4,7 @@ import logoImg from "../../images/Group 514.png";
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { SidebarContext } from "../../contexts/SidebarContexts";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { setIsOpen } = useContext(SidebarContext);
@@ -23,7 +24,9 @@ const Navbar = () => {
           </div>
           <div>
             <div>
-              <img src={logoImg} alt="" />
+              <NavLink to={'/'}>
+                <img src={logoImg} alt="" />
+              </NavLink>
             </div>
           </div>
           <div className="flex justify-between items-center gap-6">
