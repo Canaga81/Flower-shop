@@ -7,6 +7,7 @@ import { SidebarContext } from "../../contexts/SidebarContexts";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  
   const { setIsOpen } = useContext(SidebarContext);
   const { searchHandleClose } = useContext(SidebarContext);
 
