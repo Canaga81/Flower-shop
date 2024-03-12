@@ -4,17 +4,11 @@ import Card from "../Uİ/Card";
 
 const Rated = () => {
   const { products, fetchProductsHandler, isLoading, error } = useContext(DataContext);
-  //   console.log(fetchProductsHandler);
-  //   console.log(products);
+
 
   useEffect(() => {
     fetchProductsHandler();
   }, [fetchProductsHandler]);
-
-  //   useEffect(() => {
-  //     // products state'i güncellendiğinde log yapar
-  //     console.log(products);
-  //   }, [products]);
 
   return (
     <div className="w-full h-full py-28 px-6">
