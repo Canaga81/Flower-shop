@@ -1,4 +1,4 @@
-import { useState, createContext, useCallback } from "react";
+import { useState, createContext, useCallback, useEffect } from "react";
 
 export const DataContext = createContext();
 
@@ -12,36 +12,38 @@ const DataProvider = ({ children }) => {
   const [visible, setVisible] = useState(6);
 
   const visiblePlusFunc = () => {
-    setVisible(item => item.length);
+    setVisible((prevState) => prevState + products.length - visible);
   };
 
-  const fetchProductsHandler = useCallback(async () => {
+  useEffect(() => {
     setIsLoading(true);
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/flowers");
-
-      if (response.status !== 200) {
-        throw new Error("Data'da yanlisliq var !");
-      }
-
-      const data = await response.json();
-
-      setProducts(data);
+      fetch("http://localhost:3000/flowers")
+        .then((response) => response.json())
+        .then((response) => setProducts(response));
     } catch (error) {
-      setError(error.message)
+      setError(error.message);
     }
 
     setIsLoading(false);
   }, []);
 
-  // useEffect(() => {
-  //   fetchProductsHandler();
-  // }, [fetchProductsHandler]);
+  // console.log(products);
 
   return (
-    <DataContext.Provider value={{ fetchProductsHandler, products, isLoading, error, setQuery, query, visible, visiblePlusFunc }}>
+    <DataContext.Provider
+      value={{
+        products,
+        isLoading,
+        error,
+        setQuery,
+        query,
+        visible,
+        visiblePlusFunc,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );
