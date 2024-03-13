@@ -43,12 +43,13 @@ const Rated = () => {
                       .toLowerCase("tr-TR")
                       .includes(query.toLowerCase("tr-TR"))
                   )
-                  .map(({ id, title, image, price }) => (
+                  .map(({ id, title, image, price, amount }) => (
                     <Card
                       key={id}
                       title={title}
                       image={image}
                       price={price}
+                      amount={amount}
                       id={id}
                     />
                   ))}

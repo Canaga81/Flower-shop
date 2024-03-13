@@ -30,7 +30,56 @@ const DataProvider = ({ children }) => {
     setIsLoading(false);
   }, []);
 
-  // console.log(products);
+  //! Shopping Cart
+  
+  const [cart, setCart] = useState([]);
+  const [price, setPrice] = useState(0);
+
+  const handleClick = (item) => {
+    if (cart.indexOf(item) !== -1) return;
+
+    setCart([...cart, item]);
+  };
+
+  const cartRemoveItem = (id) => {
+    const arr = cart.filter((item) => item.id !== id);
+    setCart(arr);
+    handlePrice()
+  };
+
+  const handleChange = (item, d) => {
+    const cartItemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
+  
+    if (cartItemIndex !== -1) {
+      const updatedCart = [...cart]; // cart dizisinin kopyası oluşturuluyor
+  
+      updatedCart[cartItemIndex] = {
+        ...updatedCart[cartItemIndex], // önceki öğenin tüm özellikleri kopyalanıyor
+        amount: updatedCart[cartItemIndex].amount + d // amount özelliği güncelleniyor
+      };
+  
+      if (updatedCart[cartItemIndex].amount <= 0) {
+        // Eğer amount 1'den küçük veya eşitse, öğeyi sepetten kaldır.
+        updatedCart.splice(cartItemIndex, 1);
+      }
+  
+      setCart(updatedCart); // güncellenmiş kopya ile cart dizisi güncelleniyor
+    }
+  };
+
+  const handlePrice = () => {
+    let quantity = 0;
+    cart.map((cartItem) => quantity += cartItem.amount * cartItem.price);
+    setPrice(quantity);
+  }
+
+  useEffect(() => {
+    handlePrice();
+  });
+
+  const clearCartFunc = () => {
+    setCart([])
+  }
 
   return (
     <DataContext.Provider
@@ -42,6 +91,12 @@ const DataProvider = ({ children }) => {
         query,
         visible,
         visiblePlusFunc,
+        handleClick,
+        cart,
+        handleChange,
+        cartRemoveItem,
+        price,
+        clearCartFunc
       }}
     >
       {children}

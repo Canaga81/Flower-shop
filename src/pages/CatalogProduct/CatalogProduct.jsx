@@ -5,7 +5,7 @@ import CardBanksPhotos from "../../images/card-banks-photos.png";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const CatalogProduct = () => {
-  const { products } = useContext(DataContext);
+  const { products, handleClick } = useContext(DataContext);
 
   // console.log(products);
 
@@ -45,7 +45,7 @@ const CatalogProduct = () => {
             </h3>
             <img src={CardBanksPhotos} alt="" />
             <div className="flex gap-6 rd:flex-row flex-col items-center gap-y-7">
-              <button className="rd:w-[180px] w-[240px] bg-heroText py-3 px-4 border-none outline-none text-white sm:text-[18px] text-[16px] tracking-[1.5px] rounded-lg transition duration-200 opacity-80 hover:opacity-100">
+              <button onClick={() => handleClick(product)} className="rd:w-[180px] w-[240px] bg-heroText py-3 px-4 border-none outline-none text-white sm:text-[18px] text-[16px] tracking-[1.5px] rounded-lg transition duration-200 opacity-80 hover:opacity-100">
                 Səbətə əlavə et
               </button>
               <Link to={'/catalog'}>

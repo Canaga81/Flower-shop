@@ -9,10 +9,14 @@ import Navbar from "./components/Navbar/Navbar";
 import MenuSidebar from "./components/MenuSidebar/MenuSidebar";
 import SearchSidebar from "./components/SearchSidebar/SearchSidebar";
 import CatalogProduct from "./pages/CatalogProduct/CatalogProduct";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 function App() {
+
   return (
+
     <>
+
       <BrowserRouter>
 
         <Navbar />
@@ -23,6 +27,7 @@ function App() {
           <Route path="/collections" element={<Collections />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalogProduct/:id" element={<CatalogProduct />} />
+          <Route path="/shoppingcart" element={<ShoppingCart />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
 
@@ -30,8 +35,11 @@ function App() {
         <SearchSidebar />
 
       </BrowserRouter>
+      
     </>
+
   );
+
 }
 
 export default App;
