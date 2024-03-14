@@ -1,3 +1,4 @@
+import Accordion from "../../components/Accordion/Accordion";
 import Choose from "../../components/Choose/Choose";
 import Collections_component from "../../components/Collections_component/Collections_component";
 import Hero from "../../components/Hero/Hero";
@@ -15,6 +16,7 @@ const Home = () => {
       <Collections_component />
       <Choose />
       <Subscribe />
+      <Accordion />
 
     </div>
 
