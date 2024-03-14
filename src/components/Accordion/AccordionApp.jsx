@@ -3,11 +3,13 @@ import { IoChevronDownSharp } from "react-icons/io5";
 import { IoChevronUpOutline } from "react-icons/io5";
 
 const AccordionApp = ({ question, answer }) => {
+
   const [acc, setAcc] = useState(false);
 
   const handleAccFuncClose = () => {
     setAcc(false);
   };
+
   const handleAccFuncOpen = () => {
     setAcc(true);
   };
@@ -17,6 +19,7 @@ const AccordionApp = ({ question, answer }) => {
   }
 
   return (
+
     <div className="">
       <div className="flex flex-col gap-1 max-w-[900px] items-center justify-between">
         <div className="flex items-center w-full justify-between gap-3" onClick={handleOpenCloseFunc}>
@@ -51,6 +54,7 @@ const AccordionApp = ({ question, answer }) => {
       </div>
     </div>
   );
+  
 };
 
 export default AccordionApp;
