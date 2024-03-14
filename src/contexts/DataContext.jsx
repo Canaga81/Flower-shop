@@ -38,11 +38,11 @@ const DataProvider = ({ children }) => {
   //! Add Shopping Cart
   const handleClick = (item) => {
     //! Eğer öğe sepette yoksa, ekle
-    if (!cart.some((cartItem) => cartItem.id === item.id)) {
-      setCart([...cart, item]);
+    if (cart.find((cartItem) => cartItem.id === item.id)) {
+      alert("Bu öğe zaten sepetinizde bulunmaktadır.");
     } else {
       //! Eğer öğe zaten sepette varsa, ekleme işlemi yapma veya bir bildirim yapabilirsiniz
-      alert("Bu öğe zaten sepetinizde bulunmaktadır.");
+      setCart([...cart, item]);
     }
   };
 
