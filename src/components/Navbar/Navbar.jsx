@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { HiBars3BottomLeft } from "react-icons/hi2";
-import logoImg from "../../images/Group 514.png";
+import logoImg from "../../images/Group_514_image.png";
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { SidebarContext } from "../../contexts/SidebarContexts";

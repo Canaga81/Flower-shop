@@ -19,7 +19,7 @@ const Rated = () => {
         <div className="container mx-auto">
           <div className="flex flex-col items-center gap-16">
             <div>
-              <h1 className="text-center font-Montserrat font-bold lg:text-[56px] md:text-[52px] sm:[42px] text-[36px] ">
+              <h1 className="text-center font-Montserrat font-bold lg:text-[56px] md:text-[52px] sm:[42px] text-[36px]">
                 ƏN ÇOX SATILANLAR
               </h1>
             </div>
