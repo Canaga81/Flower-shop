@@ -87,6 +87,7 @@ const DataProvider = ({ children }) => {
   }
 
   return (
+    
     <DataContext.Provider
       value={{
         products,
@@ -107,6 +108,7 @@ const DataProvider = ({ children }) => {
       {children}
     </DataContext.Provider>
   );
+
 };
 
 export default DataProvider;
