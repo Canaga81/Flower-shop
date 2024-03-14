@@ -8,7 +8,7 @@ const Card = (props) => {
   const { handleClick } = useContext(DataContext);
 
   return (
-    <div className="shadow-lg w-[350px] h-[450px]">
+    <div className="shadow-lg w-[280px] h-[450px] cursor-pointer">
       <div>
         <img className="w-full h-[300px]" src={image} alt={title} />
       </div>

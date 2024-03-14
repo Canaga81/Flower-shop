@@ -23,7 +23,7 @@ const Rated = () => {
                 ƏN ÇOX SATILANLAR
               </h1>
             </div>
-            <div className="flex flex-wrap justify-center gap-9">
+            <div className="flex flex-wrap justify-center gap-32">
               {isLoading && (
                 <p className="text-center font-Montserrat text-heroText tracking-[1.5px] lg:text-[45px] md:text-[39px] sm:text-[30px] text-[25px]">
                   Loading...

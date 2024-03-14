@@ -3,7 +3,6 @@ import { GoClock } from "react-icons/go";
 import { AiOutlineGlobal } from "react-icons/ai";
 
 const Choose = () => {
-
   return (
     <div className="w-full h-full py-16 px-6">
       <div className="container mx-auto">
