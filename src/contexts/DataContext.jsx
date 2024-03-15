@@ -39,10 +39,11 @@ const DataProvider = ({ children }) => {
   const handleClick = (item) => {
     //! Eğer öğe sepette yoksa, ekle
     if (cart.find((cartItem) => cartItem.id === item.id)) {
-      alert("Bu öğe zaten sepetinizde bulunmaktadır.");
+      alert("Bu məhsul səbətə əlavə olunub !");
     } else {
       //! Eğer öğe zaten sepette varsa, ekleme işlemi yapma veya bir bildirim yapabilirsiniz
       setCart([...cart, item]);
+      alert('Sifarişiniz səbətə əlavə edildi !');
     }
   };
 

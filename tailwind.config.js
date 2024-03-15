@@ -7,6 +7,8 @@ export default {
       Montserrat: `"Montserrat", sans-serif`,
     },
     screens: {
+      lm: "240px",
+      yd: "300px",
       rd: "384px",
       sm: "640px",
       md: "768px",
