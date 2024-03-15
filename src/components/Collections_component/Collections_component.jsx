@@ -15,8 +15,8 @@ const Collections_component = () => {
   return (
     <div className="w-full h-full py-16 px-6">
       <div className="container mx-auto">
-        <div className="flex flex-col gap-7">
-          <h1 className="text-center font-Montserrat font-bold lg:text-[56px] md:text-[52px] sm:[42px] text-[24px]">
+        <div className="flex flex-col items-center gap-7">
+          <h1 className="text-center text-heroText font-Montserrat font-bold lg:text-[48px] md:text-[42px] sm:[36px] text-[24px]">
             KOLLEKSİYALARIMIZ
           </h1>
           <div className="flex gap-1 justify-center items-center flex-wrap">

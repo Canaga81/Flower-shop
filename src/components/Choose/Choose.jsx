@@ -8,7 +8,7 @@ const Choose = () => {
       <div className="container mx-auto">
         <div className="flex flex-col gap-9">
           <div>
-            <h1 className="text-center font-Montserrat font-bold lg:text-[56px] md:text-[52px] sm:[42px] text-[36px]">
+            <h1 className="text-center text-heroText font-Montserrat font-bold lg:text-[48px] md:text-[42px] sm:[36px] text-[27px]">
               Niyə bizi Seçməlisiniz ?
             </h1>
           </div>
