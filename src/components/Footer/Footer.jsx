@@ -6,11 +6,12 @@ import { ImFacebook2 } from "react-icons/im";
 import BankCardFooterImage from '../../images/bank-cards-footer-image.png';
 
 const Footer = () => {
+
   return (
     <div className="w-full h-full py-16 sm:px-12 px-6">
       <div className="container mx-auto">
-        <div className="flex flex-col gap-6 ">
-          <div className="flex justify-between items-start gap-6 flex-wrap">
+        <div className="flex flex-col gap-6">
+          <div className="flex justify-between items-center gap-x-6 gap-y-16 flex-wrap">
             <div className="flex flex-col gap-4 items-center">
               <h2 className="md:text-[24px] sm:text-[22.2px] text-[20.4px] font-Montserrat font-bold tracking-[1px]">
                 Menu
@@ -114,7 +115,9 @@ const Footer = () => {
         </div>
       </div>
     </div>
+
   );
+
 };
 
 export default Footer;

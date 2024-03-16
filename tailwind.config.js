@@ -12,6 +12,7 @@ export default {
       rd: "384px",
       sm: "640px",
       md: "768px",
+      cg: "843px",
       lg: "1024px",
       cr: "1060px",
       xl: "1440px",
