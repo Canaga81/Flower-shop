@@ -1,4 +1,5 @@
 import Accordion from "../../components/Accordion/Accordion";
+import Adress from "../../components/Adress/Adress";
 import Blogs from "../../components/Blogs/Blogs";
 import Choose from "../../components/Choose/Choose";
 import Collections_component from "../../components/Collections_component/Collections_component";
@@ -20,7 +21,8 @@ const Home = () => {
       <Accordion />
       <FollowSocialApp />
       <Blogs />
-      {/* <Responsive /> */}
+      <Adress />
+
     </div>
 
   );
