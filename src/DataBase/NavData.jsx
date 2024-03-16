@@ -1,10 +1,10 @@
 export const NavData = [
   {
-    label: "Ana Sehife",
+    label: "Ana Səhifə",
     to: "/",
   },
   {
-    label: "Haqqimizda",
+    label: "Haqqımızda",
     to: "/about",
   },
   {

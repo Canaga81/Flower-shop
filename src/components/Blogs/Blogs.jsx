@@ -1,4 +1,3 @@
-import React from "react";
 import BlogsData from "../../DataBase/BlogsData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

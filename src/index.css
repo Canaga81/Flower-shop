@@ -27,9 +27,15 @@
 
 @media(max-width: 400px) {
 
-    .slick-arrow.slick-next
+    .slick-arrow.slick-next {
+        opacity: 0;
+        overflow: hidden;
+    }
+
     .slick-arrow.slick-prev {
         opacity: 0;
+        overflow: hidden;
     }
+    
 
 }

@@ -10,6 +10,7 @@ import MenuSidebar from "./components/MenuSidebar/MenuSidebar";
 import SearchSidebar from "./components/SearchSidebar/SearchSidebar";
 import CatalogProduct from "./pages/CatalogProduct/CatalogProduct";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
 
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/collections" element={<Collections />} />
@@ -29,10 +31,14 @@ function App() {
           <Route path="/catalogProduct/:id" element={<CatalogProduct />} />
           <Route path="/shoppingcart" element={<ShoppingCart />} />
           <Route path="/contacts" element={<Contacts />} />
+          
         </Routes>
 
         <MenuSidebar />
+
         <SearchSidebar />
+
+        <Footer />
 
       </BrowserRouter>
       

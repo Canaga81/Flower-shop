@@ -12,9 +12,9 @@ const Navbar = () => {
   const { searchHandleClose, setIsOpen } = useContext(SidebarContext);
 
   return (
-    <div className="w-full h-[100px] bg-white sticky top-0 z-40">
+    <div className="w-full rd:h-[100px] h-[80px] bg-white sticky top-0 z-40">
       <div className="container mx-auto">
-        <div className="flex items-center justify-between sm:pl-24 sm:pr-24 pl-6 pr-6">
+        <div className="flex items-center justify-between gap-2 sm:pl-24 sm:pr-24 pl-0 pr-0">
           <div>
             <div
               onClick={() => setIsOpen(true)}
