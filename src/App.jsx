@@ -11,14 +11,22 @@ import SearchSidebar from "./components/SearchSidebar/SearchSidebar";
 import CatalogProduct from "./pages/CatalogProduct/CatalogProduct";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Footer from "./components/Footer/Footer";
+import { motion } from 'framer-motion';
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
 
   return (
 
-    <>
+    <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.6 }}
+    >
 
       <BrowserRouter>
+
+        <ScrollToTop />
 
         <Navbar />
 
@@ -42,7 +50,7 @@ function App() {
 
       </BrowserRouter>
       
-    </>
+    </motion.div>
 
   );
 
