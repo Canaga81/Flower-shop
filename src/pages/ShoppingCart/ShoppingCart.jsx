@@ -59,7 +59,7 @@ const ShoppingCart = () => {
                               </span>
                             </h2>
                             <p className="sm:text-[20px] text-[16px] text-heroText">
-                              Məhsulun adi:{" "}
+                              Məhsulun Qiyməti:{" "}
                               <span className="font-bold">
                                 {cartItem.price} Azn
                               </span>
@@ -162,7 +162,7 @@ const ShoppingCart = () => {
     </motion.div>
 
   );
-  
+
 };
 
 export default ShoppingCart;
