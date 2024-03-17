@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import { motion } from 'framer-motion';
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
+
 function App() {
 
   return (
@@ -53,7 +54,7 @@ function App() {
     </motion.div>
 
   );
-  
+
 
 }
 
